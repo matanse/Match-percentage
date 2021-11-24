@@ -3,6 +3,7 @@ import "./css/App.css";
 
 // Components
 import SubmitButton from "./components/SubmitButton";
+import MatchNumber from "./components/MatchNumber";
 
 function App() {
   const [clickCount, setClickCount] = useState(1);
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <div>
+      <MatchNumber />
       <SubmitButton clickHandler={clickHandler} num={clickCount} />
     </div>
   );
