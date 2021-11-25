@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { useState } from "react";
 
 const MatchNumber: React.FC = () => {
   const [name1, setName1] = useState("name 1");
@@ -21,12 +21,14 @@ const MatchNumber: React.FC = () => {
   return (
     <div>
       <div className="nameInput">
+        <p>How does -</p>
         <input
           onChange={(e) => changeHandler(e)}
           id="name1"
           placeholder="name"
           type="text"
         />
+        <p>- match with -</p>
         <input
           onChange={(e) => {
             changeHandler(e);
@@ -35,6 +37,7 @@ const MatchNumber: React.FC = () => {
           placeholder="second name"
           type="text"
         />
+        <p>?</p>
       </div>
       <div className="displayNames">
         <h1>{name1}</h1>
